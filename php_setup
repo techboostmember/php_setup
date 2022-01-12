@@ -1,5 +1,7 @@
 #!/bin/bash
+
 sudo yum update -y
+
 sudo service mariadb stop
 sudo yum -y erase mariadb-config mariadb-common mariadb-libs mariadb
 sudo yum localinstall https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm -y
