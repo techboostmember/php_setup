@@ -7,6 +7,7 @@ sudo yum -y erase mariadb-config mariadb-common mariadb-libs mariadb
 sudo yum localinstall https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm -y
 sudo yum-config-manager --disable mysql80-community
 sudo yum-config-manager --enable mysql57-community
+sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022
 sudo yum install mysql-community-server -y
 sudo systemctl start mysqld.service 
 sudo systemctl enable mysqld.service
